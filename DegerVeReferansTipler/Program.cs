@@ -20,7 +20,7 @@ namespace DegerVeReferansTipler
             int say4 = new int();
             int sayi3 = 10;
             int sayi4 = 30;
-            //sdhgjhjg
+            //sdhgjhjgfthfghfg
             sayi3 = sayi4;
             sayi4 = 65;
             Console.WriteLine(sayi3);

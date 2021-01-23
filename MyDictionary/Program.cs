@@ -8,32 +8,32 @@ namespace MyDictionary
         {
             Console.WriteLine("Hello World!");
 
-            MyDictonary<string> dictionary = new MyDictonary<string>();
-            dictionary.Add("1", "value1");
-            dictionary.Add("2", "value2");
+            MyDictonary<int, string> dictionary = new MyDictonary<int, string>();
+            dictionary.Add(1, "value1");
+            dictionary.Add(2, "value2");
 
            Console.WriteLine(dictionary.Count.ToString());
         }
     }
 
 
-    class MyDictonary<T>
+    class MyDictonary<K,T>
     {
-        T[] _kArray;
-        T[] _kTempArray;
+        K[] _kArray;
+        K[] _kTempArray;
 
         T[] _vArray;
         T[] _vTempArray;
         public MyDictonary()
         {
-            _kArray = new T[0];
+            _kArray = new K[0];
             _vArray = new T[0];
         }
 
-        public void Add(T kItem, T vItem)
+        public void Add(K kItem, T vItem)
         {
             _kTempArray = _kArray;
-            _kArray = new T[_kTempArray.Length + 1];
+            _kArray = new K[_kTempArray.Length + 1];
 
             for (int i = 0; i < _kTempArray.Length; i++)
             {
